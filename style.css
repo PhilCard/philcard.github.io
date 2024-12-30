@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 *
 {
     padding: 0;
@@ -9,13 +12,14 @@ body{
 }
 
 nav{
-	padding: 1.5%;
-    margin-left: 5%;;
+	padding-top: 2%;
+    margin-left: 7%;
 }
 
 nav ul
 {
-    position: relative;
+    font-family: "Open Sans", serif;
+    font-weight: 300;
 }
 
 
@@ -31,37 +35,89 @@ nav ul li a{
   	color: #fff;
 }
 
-.banner
+nav ul li a:hover
 {
-   position: absolute;
+    border-bottom: 3px solid #fff;
 }
 
-.banner img
+.container
 {
     width: 100%;
-
+    margin: 0 auto;
 }
 
-.veja-mais h2
+.banner-portfolio
 {
-    color: #fff;
-    margin-top: 5%;
-    margin-left: 2%;
-    margin-bottom: 1%;
-    text-align: justify;
-    position: relative;
-    width: 30%;
+    background:#330040;
 }
 
-.veja-mais a
+.banner-portfolio header
+{
+    /*background-color: rgb(93,0,118, 0.3);*/
+    background-color: rgb(45, 52, 54, 0.6);
+    padding: 1%;
+}
+
+.welcome
+{
+    display: flex;
+    margin: 1% 0;
+   
+}
+
+.welcome h2
 {   
     color: #fff;
-    background-color: #000;
-    padding: 0.5%;
-    margin-left: 10%;
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    line-height: 2rem;
+    text-align: center;
+    width: 40%;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    margin-left: 3%;
+    
+}
+
+.welcome a
+{   
+    margin-left: 17%;
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    background-color: #5D0076;
     border: 1px solid #000;
     border-radius: 3px;
-    text-decoration: none;
+    padding: 1% 1% 1% 1%;
+}
+
+.welcome a:hover
+{
+    background-color: rgb(45, 52, 54);
+}
+
+.welcome-icon
+{
+    display: flex;
+    padding-right: 5%;
+}
+
+.profile-img{
     position: absolute;
-    font-size: 23px;
+    width: 100%;
+    top: 250px;
+}
+
+.profile-img img
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 50%; */
+    
+}
+
+.profile-img figcaption
+{
+    color: #000;
 }
