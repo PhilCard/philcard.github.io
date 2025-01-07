@@ -13,13 +13,13 @@ body{
 
 nav{
 	padding-top: 2%;
-    margin-left: 7%;
+    margin-left: 3%;
 }
 
 nav ul
 {
     font-family: "Open Sans", serif;
-    font-weight: 300;
+    font-weight: 700;
 }
 
 
@@ -46,6 +46,13 @@ nav ul li a:hover
     margin: 0 auto;
 }
 
+.container-02 {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
 .banner-portfolio
 {
     background:#330040;
@@ -54,14 +61,18 @@ nav ul li a:hover
 .banner-portfolio header
 {
     /*background-color: rgb(93,0,118, 0.3);*/
-    background-color: rgb(45, 52, 54, 0.6);
     padding: 1%;
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(3px);
+    
 }
 
 .welcome
 {
     display: flex;
     margin: 1% 0;
+    padding-bottom: 6%;
    
 }
 
@@ -70,25 +81,26 @@ nav ul li a:hover
     color: #fff;
     font-family: "Roboto", serif;
     font-weight: 400;
+    font-style: oblique;
+    font-size: 1.6875em;
     line-height: 2rem;
-    text-align: center;
-    width: 40%;
-    padding-top: 5%;
-    padding-bottom: 2%;
-    margin-left: 3%;
+    text-align: justify;
+    padding-top: 7%;
+    padding-bottom: 4%;
+    padding-left: 5%;
     
 }
 
 .welcome a
 {   
-    margin-left: 17%;
+    margin-left: 27%;
     text-decoration: none;
     color: #fff;
     font-size: 25px;
     background-color: #5D0076;
     border: 1px solid #000;
     border-radius: 3px;
-    padding: 1% 1% 1% 1%;
+    padding: 1.5% 3% 1.5% 3%;
 }
 
 .welcome a:hover
@@ -102,22 +114,36 @@ nav ul li a:hover
     padding-right: 5%;
 }
 
-.profile-img{
+.profile-portfolio{
     position: absolute;
     width: 100%;
-    top: 250px;
+    top: 300px;
 }
 
-.profile-img img
+.profile-portfolio img
 {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    /* width: 50%; */
-    
+    /* width: 50%; */   
 }
 
-.profile-img figcaption
+.dev-icons
 {
-    color: #000;
+    display: flex;
+    padding-top: 12.5%;
+    padding-bottom: 1%;
+    justify-content: center;
+}
+
+.dev-icons img
+{
+    padding: 0.4375rem;
+}
+
+hr
+{
+    height: 10px;
+    border: 0;
+    box-shadow: 0 10px 10px -10px #8c8b8b inset;
 }
