@@ -131,7 +131,6 @@ nav ul li a:hover
 .dev-icons
 {
     display: flex;
-    padding-top: 12.5%;
     padding-bottom: 1%;
     justify-content: center;
 }
