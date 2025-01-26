@@ -11,9 +11,21 @@ body{
     margin: 0 auto;
 }
 
+.banner-portfolio
+{
+    background-image: url('../my_portfolio/wallpaper_portfolio.png');
+}
+
+.banner-portfolio header
+{
+    padding-top: 30px;
+}
+
 nav{
+    /*
 	padding-top: 2%;
     margin-left: 3%;
+    */
 }
 
 nav ul
@@ -42,107 +54,28 @@ nav ul li a:hover
 
 .container
 {
-    width: 100%;
-    margin: 0 auto;
-}
-
-.container-02 {
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
-    margin-left: auto;
-  }
-
-.banner-portfolio
-{
-    background:#330040;
+    margin-left: auto; 
 }
 
-.banner-portfolio header
-{
-    /*background-color: rgb(93,0,118, 0.3);*/
-    padding: 1%;
-    background: rgba(255, 255, 255, 0);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(3px);
-    
+.sobre div{
+	display: flex;
+	justify-content: space-around;
+	
 }
 
-.welcome
-{
-    display: flex;
-    margin: 1% 0;
-    padding-bottom: 6%;
-   
+.sobre div article{
+	width: 45%;
+	padding-bottom: 5%;
 }
 
-.welcome h2
-{   
-    color: #fff;
-    font-family: "Roboto", serif;
-    font-weight: 400;
-    font-style: oblique;
-    font-size: 1.6875em;
-    line-height: 2rem;
+.sobre p {
+	font-family: 'Noticia Text', serif;
+    font-size: 1em;
     text-align: justify;
-    padding-top: 7%;
-    padding-bottom: 4%;
-    padding-left: 5%;
-    
-}
-
-.welcome a
-{   
-    margin-left: 27%;
-    text-decoration: none;
-    color: #fff;
-    font-size: 25px;
-    background-color: #5D0076;
-    border: 1px solid #000;
-    border-radius: 3px;
-    padding: 1.5% 3% 1.5% 3%;
-}
-
-.welcome a:hover
-{
-    background-color: rgb(45, 52, 54);
-}
-
-.welcome-icon
-{
-    display: flex;
-    padding-right: 5%;
-}
-
-.profile-portfolio{
-    position: absolute;
-    width: 100%;
-    top: 300px;
-}
-
-.profile-portfolio img
-{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    /* width: 50%; */   
-}
-
-.dev-icons
-{
-    display: flex;
-    padding-bottom: 1%;
-    justify-content: center;
-}
-
-.dev-icons img
-{
-    padding: 0.4375rem;
-}
-
-hr
-{
-    height: 10px;
-    border: 0;
-    box-shadow: 0 10px 10px -10px #8c8b8b inset;
+    padding: 5%;
+	margin-top: 10%;
+    line-height: 25px;
 }
