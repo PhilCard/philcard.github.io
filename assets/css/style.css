@@ -83,11 +83,10 @@ h2
 	padding-bottom: 5%;
 }
 
-.texto-icons h2 
+.texto-icons h2
 {
     color: #fff;
     font-weight: 400;
-    text-align: center;
     padding-top: 1.875rem;
     padding-bottom: 2.1875rem;;
     padding-left: 6.875rem;
@@ -99,10 +98,10 @@ h2
     background: rgb(0, 0, 0, 0.6);
     padding: 2% 4%;
     color: #fff;
-    font-size: 22px;
+    font-size: 1.375em;
     text-decoration: none;
     border: 1px solid gray;
-    margin-left: 15.625rem;
+    margin-left: 14.6875rem;
 }
 
 .texto-icons a:hover 
@@ -125,9 +124,30 @@ h2
 {
     display: flex;
     justify-content: center;
+    padding-bottom: 3%;
 }
 
 .dev-icons img
 {
     padding: 0rem 0.3125rem;
+}
+
+hr
+{
+    height: 10px;
+    border: 0;
+    box-shadow: 0 10px 10px -10px #8c8b8b inset;
+}
+
+.projetos
+{   
+    background-color: #2D3436;
+}
+
+.projetos h2
+{   
+    color: #fff;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 1%; 
 }
