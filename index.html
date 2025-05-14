@@ -4,64 +4,50 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
         <title>Phil Card Portfolio</title>
     </head>
     <body>
         <main>
+            
+            <nav>
+                <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#contato">Contato</a>
+                </div>
+                <div class="logo">MeuSite</div>
+            </nav>
 
-            <div class="banner-portfolio">
-                <header>
-                    <nav>
-                        <ul>
-                            <li>
-                                <a href="#"> Home </a>
-                            </li>
-                            <li>
-                                <a href="#"> Contato</a>
-                            </li>
-                        </ul>
-                    </nav>
+            <!-- BANNER SEMÂNTICO -->
+            <section id="home">
+                <header class="banner-text">
+                <h1>Bem-vindo ao meu portfólio</h1>
+                <p>Desenvolvedor em transição com foco em web, apaixonado por tecnologia e inovação.</p>
+                <button>Saiba mais</button>
                 </header>
-
-                <div class="texto-icons">
-                    <div class="container">
-                        <span>
-                            <h2> Olá, seja muito bem vindo ao meu portfólio web. Cique logo abaixo para conhecer meus projetos </h2>
-                            <a href="#"> Projetos </a>
-                        </span>
-                        <span>
-                            <img src="assets/img/icons/github.svg" alt="github" style="margin-left: 9.375rem;">
-                            <img src="assets/img/icons/code_dev.svg" alt="code" style="padding-bottom: 3.5%;">
-                        </span>
-                    </div>
-                </div>
-
-                
-                <img src="assets/img/profile-img.png" alt="perfil-banner" style="position: absolute; top: 21.875rem; left: 50%; transform: translate(-50%, -50%);">
-
-                <div class="titulo-secao">
-                    <h2 style="text-align: center; margin-top: 6.875rem;"> Principais Tecnologias </h2>
-                </div>
-                
-
-                <div class="dev-icons">
-                    <img alt="html-icon" height="80px" width="80px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"/>
-                    <img alt="css-icon" height="80px" width="80px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"/>
-            
-                    <img  alt="js-icon" height="80px" width="80px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
-                    <img alt="php-icon" height="80px" width="80px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" />
-                </div> 
-            </div>
-
-            <hr>  
-            
-            <section class="projetos">
-                <div class="container">
-                    <h2>Meus Projetos</h2>
-                    <p> lorem ipsum auehyhsasnkamksjiajshu </p>
+                <div class="banner-icons">
+                <i class="devicon-github-original-wordmark"></i>
+                <i class="devicon-android-plain-wordmark"></i>
+                <i class="devicon-vscode-plain"></i>
                 </div>
             </section>
 
+            
+            <img src="assets/img/profile-img.png" alt="perfil-banner" style="position: absolute; top: 21.875rem; left: 50%; transform: translate(-50%, -50%);">
+
+            <div class="central-esteira">
+                <div class="dev-icons-wrapper">
+                    <div class="dev-icons" id="devIcons">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
+                    </div>
+                </div>
+            </div>
+
         </main>
+        <script src="assets/animate_js/animate.js"> </script>
     </body>
 </html>
