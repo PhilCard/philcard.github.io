@@ -7,29 +7,29 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
         <title>Phil Card Portfolio</title>
     </head>
-    <body>
+    <body onload="typeWriter()">
         <main>
             
             <nav>
                 <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#sobre">Sobre</a>
-                <a href="#contato">Contato</a>
+                    <a href="#home">Home</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#projetos">Projetos</a>
+                    <a href="#contato">Contato</a>
                 </div>
-                <div class="logo">MeuSite</div>
+                <!--<div class="logo">MeuSite</div>-->
             </nav>
 
-            <!-- BANNER SEMÂNTICO -->
             <section id="home">
                 <header class="banner-text">
-                <h1>Bem-vindo ao meu portfólio</h1>
-                <p>Desenvolvedor em transição com foco em web, apaixonado por tecnologia e inovação.</p>
-                <button>Saiba mais</button>
+                    <h1>Bem-vindo ao meu portfólio</h1>
+                    <p id="introduce_myself"></p>
+                    <button>Saiba mais</button>
                 </header>
                 <div class="banner-icons">
-                <i class="devicon-github-original-wordmark"></i>
-                <i class="devicon-android-plain-wordmark"></i>
-                <i class="devicon-vscode-plain"></i>
+                    <i class="devicon-github-original-wordmark"></i>
+                    <i class="devicon-android-plain-wordmark"></i>
+                    <i class="devicon-vscode-plain"></i>
                 </div>
             </section>
 
@@ -46,6 +46,38 @@
                     </div>
                 </div>
             </div>
+
+            <section class="sobre-mim">
+                <h2 class="sobre-titulo">Sobre mim</h2>
+                <div class="bloco card-info">
+                    <img src="assets/img/sobre-mim.png" alt="Foto de Felipe" class="card-img">
+                    <div class="card-dados">
+                        <h3>Felipe Cardoso</h3>
+                        <p><strong>Cargo:</strong> Desenvolvedor Web</p>
+                        <p><strong>Idade:</strong> 28 anos</p>
+                        <p><strong>Hobbie:</strong> Criar interfaces e explorar novas tecnologias</p>
+                        <p><strong>Experiência:</strong> +5 anos na área de TI</p>
+                    </div>
+                </div>
+
+                <div class="bloco">
+                    <h3 style="display: flex; align-items: center; gap: 8px;">
+                        O que faço ? <span style="font-size: 1.5rem;">👨‍💻</span>
+                    </h3>
+                    <p style="line-height: 1.6;">
+                        Atuo com suporte em TI, manutenção de hardware, formatação de sistemas operacionais e configuração de redes. Também presto suporte em sistemas Linux e desenvolvo sistemas personalizados. Atualmente, estou focado em me tornar um desenvolvedor fullstack com especialização em JavaScript, PHP e seus frameworks.
+                    </p>
+                </div>
+                <div class="bloco">
+                    <h3 style="display: flex; align-items: center; gap: 8px;">
+                        O que busco ? <span style="font-size: 1.5rem;">🕵️‍♂️</span>
+                    </h3>
+                    <p style="line-height: 1.6;">
+                        Busco parcerias sólidas onde possa contribuir com dedicação e excelência, garantindo a satisfação do cliente ou empregador. Valorizo oportunidades que ofereçam flexibilidade para trabalho remoto, reconhecimento profissional e a chance de integrar equipes colaborativas que promovam aprendizado e crescimento contínuo.
+                    </p>
+                </div>
+            </section>
+                    
 
         </main>
         <script src="assets/animate_js/animate.js"> </script>

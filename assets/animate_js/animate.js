@@ -1,3 +1,15 @@
+var contador = 0;
+var txt = 'Desenvolvedor em transição com foco em web, apaixonado por tecnologia e inovação';
+var speed = 50;
+
+function typeWriter() {
+  if (contador < txt.length) {
+    document.getElementById("introduce_myself").innerHTML += txt.charAt(contador);
+    contador++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
 const devIcons = document.getElementById("devIcons");
 
     function slideOnce() {
