@@ -1,124 +1,422 @@
  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
  
- * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+ * 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    body {
-      font-family: 'Space Grotesk', sans-serif;
-      background-color: #121212;
-      color: #fff;
-    }
 
-    p, h2 {
+body 
+{
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: #121212;
+    color: #fff;
+}
+
+p, h2 
+{
     font-family: 'Inter', sans-serif;
-    }
+}
 
-    /* NAVBAR */
-    nav {
+
+/* NAVBAR */
+nav 
+{
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 500;
-    letter-spacing: 0.5px;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      height: 60px;
-      backdrop-filter: blur(10px);
-      background-color: rgba(30, 30, 30, 0.4);
-      display: flex;
-      align-items: center;
-      padding: 0 110px;
-      z-index: 10;
-    }
+    letter-spacing: 0.03125rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 3.75rem;
+    backdrop-filter: blur(10px);
+    background-color: rgba(30, 30, 30, 0.4);
+    display: flex;
+    align-items: center;
+    padding: 0 6.875rem;
+    z-index: 10;
+}
 
-    .nav-links {
-      display: flex;
-      gap: 30px;
-      margin-right: auto;
-    }
 
-    .nav-links a {
-      text-decoration: none;
-      color: #fff;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
+.nav-links 
+{
+    display: flex;
+    gap: 1.875rem;
+    margin-right: auto;
+}
 
-    .nav-links a:hover {
-      color: #5B6467;
-    }
 
-    .logo {
-      font-size: 20px;
-      font-weight: bold;
-      color: #fff;
-    }
+.nav-links a 
+{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s;
+}
 
-    /* BANNER */
-    section#home {
-      width: 100%;
-      height: 300px;
-      background-color: #1e1e1e;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 110px;
-      box-sizing: border-box;
-      margin-top: 60px;
-    }
 
-    header.banner-text {
-      max-width: 50%;
-    }
+.nav-links a:hover 
+{
+    color: #5B6467;
+}
 
-    header.banner-text h1 {
-        font-weight: 700;
-        letter-spacing: 0.5px;
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
 
-    header.banner-text p {
-      font-size: 16px;
-      margin-bottom: 15px;
-    }
+.logo 
+{
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
 
-    header.banner-text button {
-      outline: none;
-      cursor: pointer;
-      border: none;
-      padding: 0.9rem 2rem;
-      margin: 0;
-      font-family: inherit;
-      font-size: inherit;
-      position: relative;
-      display: inline-block;
-      letter-spacing: 0.05rem;
-      font-weight: 700;
-      font-size: 17px;
-      border-radius: 500px;
-      overflow: hidden;
-      background: #0d0d0d;
-      color: ghostwhite;
-    }
+/* BANNER */
+section#home 
+{
+    width: 100%;
+    height: 18.75rem;
+    background-color: #1e1e1e;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6.875rem;
+    box-sizing: border-box;
+    margin-top: 3.75rem;
+}
 
-    header.banner-text button:hover
-    {
-      background: #2D3436;
-    }
 
-    .banner-icons {
-      display: flex;
-      gap: 30px;
-    }
+header.banner-text 
+{
+    max-width: 50%;
+}
 
-    .banner-icons i {
-      font-size: 72px;
-      color: #fff;
-    }
+
+header.banner-text h1 
+{
+    font-weight: 700;
+    letter-spacing: 0.03125rem;
+    font-size: 1.75em;
+    margin-bottom: 0.625rem;
+}
+
+
+header.banner-text p 
+{
+    font-size: 1em;
+    margin-bottom: 0.9375rem;
+}
+
+
+header.banner-text button,
+.custom-button 
+{
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 0.9rem 2rem;
+    margin: 0;
+    font-family: inherit;
+    font-size: 1.0625em;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    border-radius: 500px;
+    overflow: hidden;
+    background: #0d0d0d;
+    color: ghostwhite;
+    transition: background 0.3s, color 0.3s;
+}
+
+
+header.banner-text button:hover
+{
+    background: #2D3436;
+}
+
+
+.banner-icons 
+{
+    display: flex;
+    gap: 1.875rem;
+}
+
+
+.banner-icons i 
+{
+    font-size: 4.5em;
+    color: #fff;
+}
+
+
+.central-esteira 
+{
+    margin-top: 9%;
+    margin-bottom: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.dev-icons-wrapper 
+{
+    width: 23.75rem;
+    overflow: hidden;
+}
+
+
+.dev-icons 
+{
+    display: flex;
+    gap: 1.25rem;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+.dev-icons img 
+{
+    width: 5rem;
+    height: 5rem;
+    flex-shrink: 0;
+}
+
+.sobre-mim 
+{
+    background-color: #EDEADE;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2.5rem 1.25rem;
+    margin: auto;
+    gap: 1.25rem;
+}
+
+
+.bloco 
+{
+    margin-top: 7%;
+    margin-bottom: 5%;
+    flex: 1;
+    min-width: 15.625rem;
+    background-color: #1e1e1e;
+    padding: 1.25rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.06);
+}
+ 
+.bloco h3,
+.card-dados h3 
+{
+    margin-bottom: 0.625rem;
+    color: #fff;
+    font-size: 1.125em;
+}
+
+
+.card-info 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1e1e1e;
+    padding: 1.25rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.06);
+}
+
+.card-dados 
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+
+.card-img 
+{
+    width: 8.75rem;
+    height: 8.75rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1.25rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.2);
+}
+
+
+.card-dados p 
+{
+    margin: 0.3125rem 0;
+    color: #ddd;
+    font-size: 1em;
+}
+
+
+.language-switch select 
+{
+    background-color: #0d0d0d;
+    color: ghostwhite;
+    border: none;
+    padding: 0.4rem 0.7rem;
+    border-radius: 0.375rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.language-switch select:hover 
+{
+    background-color: #2c2c2c;
+}
+
+
+.projetos 
+{
+    background-color: #1e1e1e;
+    padding: 1.25rem 1.25rem;
+    padding-bottom: 5%;
+    margin: auto;
+}
+
+.button-group 
+{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+
+.custom-button:hover {
+  background: ghostwhite;
+  color: #0d0d0d;
+}
+
+
+.card-container 
+{
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding-left: 1.25rem;
+}
+
+.card 
+{
+    background-color: #1e1e1e;
+    width: 12.5rem;
+    height: 18.75rem;
+    border-radius: 0.625rem;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.card:hover 
+{
+    transform: scale(1.08);
+    box-shadow: 0 0.5rem 1.25rem rgba(255, 255, 255, 0.15);
+    z-index: 10;
+}
+
+
+.card-image 
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Sobreposição do título */
+.card-content 
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
+}
+
+.card-content h3 
+{
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+
+.card-link 
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer 
+{
+    color: #f0f0f0;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-family: 'Arial', sans-serif;
+}
+
+
+.footer-title 
+{
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.footer-icons 
+{
+    margin-bottom: 1rem;
+}
+
+.footer-icons a 
+{
+    color: #f0f0f0;
+    margin: 0 0.5rem;
+    font-size: 1.4rem;
+    transition: color 0.3s;
+}
+
+.footer-icons a:hover 
+{
+    color: #ff6b6b;
+}
+
+.footer-email 
+{
+    margin-bottom: 1rem;
+}
+
+.footer-email a 
+{
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+
+.footer-email a:hover 
+{
+    color: #ff6b6b;
+}
+
+.footer-copy p 
+{
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin: 0;
+}
+
+
+/*
 
     @media (max-width: 768px) {
       nav {
@@ -147,244 +445,5 @@
         margin-bottom: 20px;
       }
     }
-
-    .central-esteira {
-      margin-top: 9%;
-      margin-bottom: 4%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-     .dev-icons-wrapper {
-      width: 380px; /* largura visível ajustada */
-  	overflow: hidden;
-    }
-
-    .dev-icons {
-      display: flex;
-      gap: 20px;
-      position: relative;
-      transition: transform 0.5s ease-in-out;
-    }
-
-    .dev-icons img {
-      width: 80px;
-      height: 80px;
-      flex-shrink: 0;
-    }
-
-    .sobre-mim {
-      background-color: #EDEADE;
-      display: flex;
-      flex-wrap: wrap;
-      padding: 40px 20px;
-      margin: auto;
-      gap: 20px;
-    }
-
-
-
-    .bloco {
-      flex: 1;
-      min-width: 250px;
-      background-color: #1e1e1e;
-      padding: 20px;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    }
-    .bloco h3 {
-      margin-bottom: 10px;
-      color: #fff;
-    }
-
-    .card-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #1e1e1e;
-  padding: 20px;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-}
-
-.card-dados
-{
-   margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-}
-
-.card-img {
-  width: 140px;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-.card-dados p {
-  margin: 5px 0;
-  color: #ddd;
-}
-
-.card-dados h3 {
-  margin-bottom: 10px;
-  color: #fff;
-}
-
-.language-switch select {
-  background-color: #0d0d0d;
-  color: ghostwhite;
-  border: none;
-  padding: 0.4rem 0.7rem;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.language-switch select:hover {
-  background-color: #2c2c2c;
-}
-
-.projetos
-{
-  padding: 20px 20px;
-  margin: auto;
-}
-
-.button-group {
-  display: flex;
-  gap: 1rem; /* espaço entre os botões */
-  margin-bottom: 2rem
-}
-
-.custom-button {
-  outline: none;
-  cursor: pointer;
-  border: none;
-  padding: 0.9rem 2rem;
-  margin: 0;
-  font-family: inherit;
-  font-size: 17px;
-  position: relative;
-  display: inline-block;
-  letter-spacing: 0.05rem;
-  font-weight: 700;
-  border-radius: 500px;
-  overflow: hidden;
-  background: #0d0d0d;
-  color: ghostwhite;
-  transition: background 0.3s, color 0.3s;
-}
-
-.custom-button:hover {
-  background: ghostwhite;
-  color: #0d0d0d;
-}
-
-
-.card-container {
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  padding-left: 20px;
-}
-
-.card {
-  background-color: #1e1e1e;
-  width: 200px;
-  height: 300px;
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.08);
-  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
-  z-index: 10;
-}
-
-.card-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* Sobreposição do título */
-.card-content {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 1rem;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-  color: white;
-}
-
-.card-content h3 {
-  margin: 0;
-  font-size: 1.1rem;
-}
-
-.card-link {
-  text-decoration: none;
-  color: inherit;
-}
-
-.footer {
-  background-color: #1e1e1e;
-  color: #f0f0f0;
-  text-align: center;
-  padding: 2rem 1rem;
-  font-family: 'Arial', sans-serif;
-}
-
-.footer-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.footer-icons {
-  margin-bottom: 1rem;
-}
-
-.footer-icons a {
-  color: #f0f0f0;
-  margin: 0 0.5rem;
-  font-size: 1.4rem;
-  transition: color 0.3s;
-}
-
-.footer-icons a:hover {
-  color: #ff6b6b;
-}
-
-.footer-email {
-  margin-bottom: 1rem;
-}
-
-.footer-email a {
-  color: #f0f0f0;
-  text-decoration: none;
-  font-size: 0.95rem;
-  transition: color 0.3s;
-}
-
-.footer-email a:hover {
-  color: #ff6b6b;
-}
-
-.footer-copy p {
-  font-size: 0.9rem;
-  opacity: 0.7;
-  margin: 0;
-}
-
+  */
   
