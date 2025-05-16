@@ -4,8 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-        <title>Phil Card Portfolio</title>
+        <title>PhilCard WebSite</title>
     </head>
     <body onload="typeWriter()">
         <main>
@@ -18,6 +19,13 @@
                     <a href="#contato">Contato</a>
                 </div>
                 <!--<div class="logo">MeuSite</div>-->
+                <div class="language-switch">
+                    <label for="language">🌐</label>
+                    <select id="language" onchange="changeLanguage(this.value)">
+                        <option value="pt" selected>PT</option>
+                        <option value="en">EN</option>
+                    </select>
+                </div>
             </nav>
 
             <section id="home">
@@ -48,7 +56,6 @@
             </div>
 
             <section class="sobre-mim">
-                <h2 class="sobre-titulo">Sobre mim</h2>
                 <div class="bloco card-info">
                     <img src="assets/img/sobre-mim.png" alt="Foto de Felipe" class="card-img">
                     <div class="card-dados">
@@ -76,8 +83,52 @@
                         Busco parcerias sólidas onde possa contribuir com dedicação e excelência, garantindo a satisfação do cliente ou empregador. Valorizo oportunidades que ofereçam flexibilidade para trabalho remoto, reconhecimento profissional e a chance de integrar equipes colaborativas que promovam aprendizado e crescimento contínuo.
                     </p>
                 </div>
+            </section>  
+            
+            <section class="projetos"> 
+                <div class="button-group">
+                    <button class="custom-button">Todos</button>
+                    <button class="custom-button">Back-end</button>
+                    <button class="custom-button">Front-end</button>
+                </div>
+                <div class="card-container">
+                    <a href="https://github.com/PhilCard/JokenPo" target="_blank" class="card-link">
+                        <div class="card">
+                            <img src="assets/img/jokenpo.jpg" alt="jokenpo" class="card-image" />
+                            <div class="card-content">
+                                <h3>Jokenpo</h3>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/PhilCard/helpDesk" target="_blank" class="card-link">
+                        <div class="card">
+                            <img src="assets/img/helpDesk.jpg" alt="helpDesk" class="card-image" />
+                            <div class="card-content">
+                                <h3>Help Desk</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </section>
-                    
+
+
+            <footer class="footer">
+                <p class="footer-title">Me siga nas redes sociais</p>
+
+                <div class="footer-icons">
+                    <a href="https://linkedin.com/in/seulink" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://instagram.com/seuusuario" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+
+                <div class="footer-email">
+                    <a href="mailto:felipe2019alves22@gmail.com">felipe2019alves22@gmail.com</a>
+                </div>
+
+                <div class="footer-copy">
+                    <p>&copy; 2025 Felipe Alves. Todos os direitos reservados.</p>
+                </div>
+            </footer>
 
         </main>
         <script src="assets/animate_js/animate.js"> </script>
