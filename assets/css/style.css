@@ -8,12 +8,22 @@
     box-sizing: border-box;
 }
 
+html 
+{
+  scroll-behavior: smooth;
+}
+
 
 body 
 {
     font-family: 'Space Grotesk', sans-serif;
     background-color: #121212;
     color: #fff;
+}
+
+.wow
+{
+    visibility: hidden;
 }
 
 p, h2 
@@ -132,7 +142,7 @@ header.banner-text button,
 
 header.banner-text button:hover
 {
-    background: #2D3436;
+    border: 1px solid #edeade;
 }
 
 
@@ -185,7 +195,8 @@ header.banner-text button:hover
 
 .sobre-mim 
 {
-    background-color: #EDEADE;
+    background-image: url('../img/background_sobre.png');
+    background-attachment: fixed;
     display: flex;
     flex-wrap: wrap;
     padding: 2.5rem 1.25rem;
@@ -286,10 +297,14 @@ header.banner-text button:hover
     margin-bottom: 2rem;
 }
 
+#todos
+{
+    background: ghostwhite;
+    color: #0d0d0d;
+}
 
 .custom-button:hover {
-  background: ghostwhite;
-  color: #0d0d0d;
+  border: 1px solid #edeade;
 }
 
 
@@ -386,7 +401,7 @@ header.banner-text button:hover
 
 .footer-icons a:hover 
 {
-    color: #ff6b6b;
+    color: #5B6467;
 }
 
 .footer-email 
@@ -405,7 +420,7 @@ header.banner-text button:hover
 
 .footer-email a:hover 
 {
-    color: #ff6b6b;
+    color: #5B6467;
 }
 
 .footer-copy p 
@@ -415,6 +430,47 @@ header.banner-text button:hover
     margin: 0;
 }
 
+.scroll-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background-color: #1e1e2f;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      text-decoration: none;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .scroll-top:hover {
+      background-color: #2f2f4f;
+      transform: translateY(-3px);
+    }
+
+    .scroll-top::before {
+      content: '';
+      display: block;
+      width: 12px;
+      height: 12px;
+      border-top: 3px solid white;
+      border-right: 3px solid white;
+      transform: rotate(-45deg);
+    }
+
+    /* Âncora no topo */
+    #topo {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
 
 /*
 
