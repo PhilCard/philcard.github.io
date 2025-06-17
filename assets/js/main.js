@@ -6,12 +6,26 @@ let speed = 50;
 const btn_group = document.querySelector('.button-group');
 
 const stacks = [
-  {dev : 'back', img : 'img/helpDesk.jpg'},
-  {dev : 'front', img : 'img/jokenpo.jpg'}
+  {dev : 'back', titulo : 'HelpDesk', link: 'https://github.com/PhilCard/JokenPo', img : 'img/helpDesk.jpg'},
+  {dev : 'front', titulo : 'Jokenpo', link: 'https://github.com/PhilCard/helpDesk', img : 'img/jokenpo.jpg'}
   //{dev : 'back', img : 'img/jokenpo.jpg'}
 ]
 
 window.addEventListener('load',typeWriter);
+
+function changeLanguage()
+{
+  let lang = document.getElementById('language').value;
+  if(lang == 'en')
+  {
+    //window.location = 'en/index.html';
+    console.log('english');
+  }
+  else
+  {
+    console.log('estou em pt');
+  }
+}
 
 window.onscroll = function()
 {
@@ -73,10 +87,24 @@ btn_group.addEventListener('click', event => {
    if(event.target && event.target.id === 'backend') 
   {
     //console.log(event.target.id);
+    /*
+    for(let stack of stacks)
+    {
+
+    }
+    //mudar estilo do botão, mostrar que está selecionado
+    /*/
   }
    if(event.target && event.target.id === 'frontend') 
   {
     //console.log(event.target.id);
+    /*
+    for(let stack of stacks)
+    {
+
+    }
+    //mudar estilo do botão, mostrar que está selecionado
+    /*/
   }
 
 });

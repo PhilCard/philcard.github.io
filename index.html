@@ -2,12 +2,18 @@
     <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
+        <meta name="Description" content="Profissional de TI, 5+ anos de experiência no ramo, especialista em desenvolvimento de web sites e suporte ">
+        <meta name="Keywords" content="Felipe Cardoso, Analista de TI, Desenvolvedor de sistemas web, Projetos de TI">	
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PhilCard Dev</title>
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-        <title>PhilCard WebSite</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+        <link rel="manifest" href="assets/img/favicon/site.webmanifest">
     </head>
     <body>
         <main>
@@ -18,10 +24,9 @@
                     <a href="#projetos">Projetos</a>
                     <a href="#contato">Contato</a>
                 </div>
-                <!--<div class="logo">MeuSite</div>-->
                 <div class="language-switch">
                     <label for="language">🌐</label>
-                    <select id="language" onchange="changeLanguage(this.value)">
+                    <select id="language" onchange="changeLanguage()">
                         <option value="pt" selected>PT</option>
                         <option value="en">EN</option>
                     </select>
@@ -32,7 +37,7 @@
                 <header class="banner-text">
                     <h1>Bem-vindo ao meu portfólio</h1>
                     <p id="introduce_myself"></p>
-                    <button>Saiba mais</button>
+                    <a href="#sobre"><button>Saiba mais</button></a>
                 </header>
                 <div class="banner-icons">
                     <i class="devicon-github-original-wordmark"></i>
@@ -108,6 +113,15 @@
                             <img src="assets/img/helpDesk.jpg" alt="helpDesk" class="card-image" />
                             <div class="card-content">
                                 <h3>Help Desk</h3>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/PhilCard/Restaurant_pergola" target="_blank" class="card-link">
+                        <div class="card">
+                            <img src="assets/img/pergola_site.png" alt="pergola" class="card-image" />
+                            <div class="card-content">
+                                <h3>Site Pergola</h3>
                             </div>
                         </div>
                     </a>
