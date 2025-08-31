@@ -142,7 +142,9 @@ header.banner-text button,
 
 header.banner-text button:hover
 {
-    border: 1px solid #edeade;
+    color: ghostwhite;
+   background: rgba(255, 255, 255, 0.2);
+    border-color: transparent;
 }
 
 
@@ -162,7 +164,7 @@ header.banner-text button:hover
 
 .central-esteira 
 {
-    margin-top: 9%;
+    margin-top: 7.5rem;
     margin-bottom: 4%;
     display: flex;
     justify-content: center;
@@ -195,8 +197,7 @@ header.banner-text button:hover
 
 .sobre-mim 
 {
-    background-image: url('../img/background_sobre.png');
-    background-attachment: fixed;
+    background-color: #3D3D3D;
     display: flex;
     flex-wrap: wrap;
     padding: 2.5rem 1.25rem;
@@ -282,6 +283,34 @@ header.banner-text button:hover
 }
 
 
+
+.curriculum
+{
+    background-image: url('../img/fundo_curriculo.png');
+    background-attachment: fixed;
+    text-align: center;
+    padding: 12%;
+    font-size: 1.75em;
+}
+
+.curriculum a
+{
+    text-decoration: none;
+    font-weight: 650;
+    padding: 3%;
+    border: 2px solid black;
+    background: #0d0d0d;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.curriculum a:hover
+{
+    background: rgba(255, 255, 255, 0.2);
+    border-color: transparent;
+}
+
+
 .projetos 
 {
     background-color: #1e1e1e;
@@ -303,8 +332,15 @@ header.banner-text button:hover
     color: #0d0d0d;
 }
 
+#todos:hover{
+    color: #0f0f0f;
+    background: #d9d9d9;
+    border-color: transparent;
+}
+
 .custom-button:hover {
-  border: 1px solid #edeade;
+    background: rgba(255, 255, 255, 0.2);
+    border-color: transparent;
 }
 
 
@@ -451,7 +487,9 @@ header.banner-text button:hover
     }
 
     .scroll-top:hover {
-      border: 2px solid #000;
+    color: #0f0f0f;
+    background: #d9d9d9;
+    border-color: transparent;
     }
 
     .scroll-top::before {
