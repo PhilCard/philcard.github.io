@@ -722,12 +722,14 @@
          font-size: 1.2rem;
      }
  }
-
-
- 
  
 
  @media (max-width: 576px) {
+
+    .banner-icons {
+        gap: 35px;
+        padding-top: 10px;
+    }
 
     nav{
         background:rgba(13,13,13,0.8);
