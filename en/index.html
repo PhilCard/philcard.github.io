@@ -1,85 +1,287 @@
 <!DOCTYPE html>
-    <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-        <title>PhilCard Dev</title>
-    </head>
-    <body onload="typeWriter()">
-        <main>
-            
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Description"
+        content="Profissional de TI, 5+ anos de experiência no ramo, especialista em desenvolvimento de web sites e suporte ">
+    <meta name="Keywords" content="Felipe Cardoso, Analista de TI, Desenvolvedor de sistemas web, Projetos de TI">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhilCard Dev</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/img/favicon/site.webmanifest">
+</head>
+
+<body>
+    <main>
+        <div id="topo">
+            <button class="abrir-menu"></button>
             <nav>
                 <div class="nav-links">
-                    <a href="#sobre">About Me</a>
+                    <a href="#sobre">About</a>
                     <a href="#projetos">Projects</a>
                     <a href="#contato">Contact</a>
                 </div>
-                <!--<div class="logo">MeuSite</div>-->
                 <div class="language-switch">
-                    <button>PT | EN</button>
+                    <label for="language">🌐</label>
+                    <select id="language" onchange="changeLanguage()">
+                        <option value="pt">PT</option>
+                        <option value="en" selected>EN</option>
+                    </select>
                 </div>
             </nav>
+        </div>
 
-            <section id="home">
-                <header class="banner-text">
-                    <h1>Welcome to my WebSite</h1>
-                    <p id="introduce_myself"></p>
-                    <button>About</button>
-                </header>
-                <div class="banner-icons">
-                    <i class="devicon-github-original-wordmark"></i>
-                    <i class="devicon-android-plain-wordmark"></i>
-                    <i class="devicon-vscode-plain"></i>
+        <section id="home">
+            <header class="banner-text">
+                <h1>Welcome to My Website</h1>
+                <p id="introduce_myself"></p>
+                <a href="#sobre"><button>More About</button></a>
+            </header>
+            <div class="banner-icons">
+                <i class="devicon-github-original-wordmark"></i>
+                <i class="devicon-archlinux-plain"></i>
+                <i class="devicon-postman-plain"></i>
+            </div>
+        </section>
+
+
+        <img src="../assets/img/profile-img.png" alt="perfil-banner"
+            style="position: absolute; top: 21.875rem; left: 50%; transform: translate(-50%, -50%);"
+        />
+
+        <div class="central-esteira">
+            <div class="dev-icons-wrapper">
+                <div class="dev-icons" id="devIcons">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                        alt="JS">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
                 </div>
-            </section>
+            </div>
+        </div>
 
-            
-            <img src="../assets/img/profile-img.png" alt="perfil-banner" style="position: absolute; top: 21.875rem; left: 50%; transform: translate(-50%, -50%);">
+        <a id="seta" href="#topo" title="Voltar ao topo"></a>
 
-            <div class="central-esteira">
-                <div class="dev-icons-wrapper">
-                    <div class="dev-icons" id="devIcons">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
+        <section id="sobre" class="sobre-mim">
+            <div class="header">
+                <h2>About Me</h2>
+                <p>Lets Introduce a little Bit More About MySelf</p>
+                <hr class="header-divider">
+            </div>
+
+            <div class="cards-grid">
+                <!-- Card 1: Sobre Mim -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-emoji">👨‍💻</div>
+                        <h2 class="card-title">About Me</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="info-item">
+                            <span class="info-label">Occupation:</span>
+                            <span class="info-value">Web Developer</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Age:</span>
+                            <span class="info-value">29 Years</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Hobbie:</span>
+                            <span class="info-value">Create interfaces and explore new technology</span>
+                        </div>
+
+                        <div class="info-item">
+                            <span class="info-label">Expertise:</span>
+                            <span class="info-value">5+ years IT experience</span>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <!-- Card 2: O que eu faço -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-emoji">🚀</div>
+                        <h2 class="card-title">What do i Do?</h2>
+                    </div>
+                    <div class="card-content">
+                        <p class="description">
+                            I develop modern and responsive web interfaces, focusing on the user experience. I work with current technologies to create efficient solutions.
+                        </p>
+                        <div class="skills-list">
+                            <span class="skill-tag">PHP</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Linux</span>
+                            <span class="skill-tag">MySql</span>
+                            <span class="skill-tag">Bootstrap</span>
+                            <span class="skill-tag">JQUERY</span>
+                            <span class="skill-tag">n8n</span>
+                            <span class="skill-tag">Oracle</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: O que procuro -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-emoji">🎯</div>
+                        <h2 class="card-title">What Am I Looking?</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="goals-list">
+                            <div class="goal-item">
+                                <span class="goal-icon">💼</span>
+                                <span class="goal-text">
+                                    Oportunidades desafiadoras em equipes inovadoras onde possa contribuir
+                                    e continuar aprendendo
+                                </span>
+                            </div>
+                            <div class="goal-item">
+                                <span class="goal-icon">🌱</span>
+                                <span class="goal-text">
+                                    Projects that allow me to explore new technologies, focused on professional growth
+                                </span>
+                            </div>
+                            <div class="goal-item">
+                                <span class="goal-icon">🤝</span>
+                                <span class="goal-text">
+                                    Colaborar em um ambiente que valorize criatividade, qualidade e
+                                    impacto positivo
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <section class="sobre-mim">
-                <div class="bloco card-info">
-                    <img src="../assets/img/sobre-mim.png" alt="Foto de Felipe" class="card-img">
-                    <div class="card-dados">
-                        <h3>Felipe Cardoso</h3>
-                        <p><strong>Position:</strong> Web Developer</p>
-                        <p><strong>Age:</strong> 28y</p>
-                        <p><strong>Hobbie:</strong> Criar interfaces e explorar novas tecnologias</p>
-                        <p><strong>Expetise:</strong> +5 years on TI support</p>
+        <section id="projetos" class="projetos">
+            <div class="header">
+                <h2>My Projects</h2>
+                <p>Conheça meus projetos desenvolvidos</p>
+                <hr class="header-divider">
+            </div>
+            <div class="button-group">
+                <button id="todos" class="custom-button">All</button>
+                <button id="backend" class="custom-button">Back-end</button>
+                <button id="frontend" class="custom-button">Front-end</button>
+            </div>
+
+            <div class="tech-grid">
+                <!-- HTML5 -->
+                <div class="tech-card">
+                    <div class="card-icon html5">
+                        
+                    </div>
+                    <div class="card-info">
+                        <h3 class="tech-name">HTML5</h3>
+                        <p class="tech-category">Front-end</p>
                     </div>
                 </div>
 
-                <div class="bloco">
-                    <h3 style="display: flex; align-items: center; gap: 8px;">
-                        What do i do? <span style="font-size: 1.5rem;">👨‍💻</span>
-                    </h3>
-                    <p style="line-height: 1.6;">
-                        I work with IT support, hardware maintenance, operating system formatting, and network configuration. I also provide support for Linux systems and develop custom applications. Currently, I'm focused on becoming a fullstack developer with specialization in JavaScript, PHP, and their frameworks.
-                    </p>
+                <!-- JavaScript -->
+                <div class="tech-card">
+                    <div class="card-icon javascript">
+                        
+                    </div>
+                    <div class="card-info">
+                        <h3 class="tech-name">JavaScript</h3>
+                        <p class="tech-category">Front-end</p>
+                    </div>
                 </div>
-                <div class="bloco">
-                    <h3 style="display: flex; align-items: center; gap: 8px;">
-                        What am I looking for? <span style="font-size: 1.5rem;">🕵️‍♂️</span>
-                    </h3>
-                    <p style="line-height: 1.6;">
-                        I seek solid partnerships where I can contribute with dedication and excellence, ensuring client or employer satisfaction. I value opportunities that offer flexibility for remote work, professional recognition, and the chance to join collaborative teams that foster continuous learning and growth.
-                    </p>
-                </div>
-            </section>       
 
-        </main>
-        <script src="../assets/animate_js/animate.js"> </script>
-    </body>
+                <!-- Node.js -->
+                <div class="tech-card">
+                    <div class="card-icon nodejs">
+                        
+                    </div>
+                    <div class="card-info">
+                        <h3 class="tech-name">Node.js</h3>
+                        <p class="tech-category">Back-end</p>
+                    </div>
+                </div>
+
+                <!-- CSS3 -->
+                <div class="tech-card">
+                    <div class="card-icon css3">
+                        
+                    </div>
+                    <div class="card-info">
+                        <h3 class="tech-name">CSS3</h3>
+                        <p class="tech-category">Front-end</p>
+                    </div>
+                </div>
+
+                <!-- React -->
+                <div class="tech-card">
+                    <div class="card-icon react">
+                        <img src="../assets/img/sobremim.png" alt="">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="tech-name">React</h3>
+                        <p class="tech-category">Front-end</p>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="card-container">
+                <a href="https://github.com/PhilCard/JokenPo" target="_blank" class="card-link">
+                    <div class="card">
+                        <img src="assets/img/jokenpo.jpg" alt="jokenpo" class="card-image" />
+                        <div class="card-content">
+                            <h3>Jokenpo</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/PhilCard/helpDesk" target="_blank" class="card-link">
+                    <div class="card">
+                        <img src="assets/img/helpDesk.jpg" alt="helpDesk" class="card-image" />
+                        <div class="card-content">
+                            <h3>Help Desk</h3>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/PhilCard/Restaurant_pergola" target="_blank" class="card-link">
+                    <div class="card">
+                        <img src="assets/img/pergola_site.png" alt="pergola" class="card-image" />
+                        <div class="card-content">
+                            <h3>Site Pergola</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>-->
+        </section>
+
+        <footer id="contato" class="footer">
+            <p class="footer-title">Contact Me</p>
+
+            <div class="footer-icons">
+                <a href="https://www.linkedin.com/in/felipe-alves-a54642184/" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://instagram.com/seuusuario" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+
+            <div class="footer-email">
+                <a href="mailto:felipe2019alves22@gmail.com">felipe2019alves22@gmail.com</a>
+            </div>
+
+            <div class="footer-copy">
+                <p>&copy; 2025 Felipe Cardoso</p>
+            </div>
+        </footer>
+
+    </main>
+    <script src="../assets/js/main.js"> </script>
+</body>
+
 </html>

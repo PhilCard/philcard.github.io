@@ -28,7 +28,19 @@
  }
 
 
- /* NAVBAR */
+ /* ----- NAV / TOPO ------ */
+
+ #topo {
+     position: absolute;
+     top: 0;
+     left: 0;
+ }
+
+
+ .abrir-menu {
+     display: none;
+ }
+
  nav {
      font-family: 'Space Grotesk', sans-serif;
      font-weight: 500;
@@ -72,7 +84,23 @@
      color: #fff;
  }
 
- /* BANNER */
+ .language-switch select {
+     background-color: #0d0d0d;
+     color: ghostwhite;
+     border: none;
+     padding: 0.4rem 0.7rem;
+     border-radius: 0.375rem;
+     font-size: 0.9rem;
+     cursor: pointer;
+     transition: background 0.3s;
+ }
+
+ .language-switch select:hover {
+     background-color: #2c2c2c;
+ }
+
+
+ /* ----- Seção Home / TOPO ------ */
  section#home {
      width: 100%;
      height: 18.75rem;
@@ -174,21 +202,10 @@
      flex-shrink: 0;
  }
 
+ /* ----- Seção Sobre ------ */
 
-
- .language-switch select {
-     background-color: #0d0d0d;
-     color: ghostwhite;
-     border: none;
-     padding: 0.4rem 0.7rem;
-     border-radius: 0.375rem;
-     font-size: 0.9rem;
-     cursor: pointer;
-     transition: background 0.3s;
- }
-
- .language-switch select:hover {
-     background-color: #2c2c2c;
+ .sobre-mim {
+     margin-top: 100px;
  }
 
 
@@ -364,6 +381,8 @@
  }
 
 
+ /* ----- Seção Projetos ------ */
+
  .projetos {
      padding: 1.25rem 1.25rem;
      padding-bottom: 5%;
@@ -377,16 +396,19 @@
      margin-bottom: 2rem;
  }
 
+ /*
  #todos {
      background: ghostwhite;
      color: #0d0d0d;
  }
+     */
 
- #todos:hover {
-     color: #0f0f0f;
-     background: #d9d9d9;
-     border-color: transparent;
- }
+ /* precisa acionar evento mouse */
+ .hover-ativo{
+    color: #0f0f0f;
+    background: #d9d9d9;
+    border-color: transparent;
+}
 
  .custom-button:hover {
      background: rgba(255, 255, 255, 0.2);
@@ -411,6 +433,10 @@
      gap: 30px;
      max-width: 1200px;
      margin: 0 auto;
+ }
+
+ .tech-grid a{
+    text-decoration: none;
  }
 
  .tech-card {
@@ -475,7 +501,7 @@
      font-weight: 400;
  }
 
- /* Cores específicas para cada tecnologia */
+
  .html5 {
      background: #e44d26;
  }
@@ -493,77 +519,11 @@
  }
 
  .react {
-     background: #61dafb;
- }
-
- /* Animação de entrada */
- .tech-card {
-     opacity: 0;
-     animation: fadeInUp 0.6s ease-out forwards;
- }
-
- .tech-card:nth-child(1) {
-     animation-delay: 0.1s;
- }
-
- .tech-card:nth-child(2) {
-     animation-delay: 0.2s;
- }
-
- .tech-card:nth-child(3) {
-     animation-delay: 0.3s;
- }
-
- .tech-card:nth-child(4) {
-     animation-delay: 0.4s;
- }
-
- .tech-card:nth-child(5) {
-     animation-delay: 0.5s;
- }
-
- .tech-card:nth-child(6) {
-     animation-delay: 0.6s;
- }
-
- .tech-card:nth-child(7) {
-     animation-delay: 0.7s;
- }
-
- .tech-card:nth-child(8) {
-     animation-delay: 0.8s;
- }
-
- .tech-card:nth-child(9) {
-     animation-delay: 0.9s;
- }
-
- .tech-card:nth-child(10) {
-     animation-delay: 1.0s;
- }
-
- .tech-card:nth-child(11) {
-     animation-delay: 1.1s;
- }
-
- .tech-card:nth-child(12) {
-     animation-delay: 1.2s;
- }
-
- @keyframes fadeInUp {
-     from {
-         opacity: 0;
-         transform: translateY(30px);
-     }
-
-     to {
-         opacity: 1;
-         transform: translateY(0);
-     }
+     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);;
  }
 
 
-
+ /* ----- Roda pé ------ */
 
  .footer {
      background-color: #1e1e1e;
@@ -653,60 +613,55 @@
      transform: rotate(-45deg);
  }
 
- #topo {
-     position: absolute;
-     top: 0;
-     left: 0;
- }
+ /* -------- Breakpoint DEVICES ----- */
 
-
- .abrir-menu{
-		display: none;
-	}
-
-
- /* responsivo */ 
+ /*-------- LARGE ------- */
 
  @media (max-width: 992px) {
-    section#home {
-        padding:40px;
-    }
+     section#home {
+         padding: 40px;
+     }
  }
 
+
+ /*-------- MEDIUM / IPAD ------- */
 
  @media (max-width: 768px) {
 
-    .card{
-        margin-right: 20px;
-        margin-left: 20px;
+     section#home {
+         padding: 20px;
      }
 
-    .banner-icons {
-    gap: 10px;
-    }
+     header.banner-text h1 {
+         font-weight: 700;
+         letter-spacing: 0.03125rem;
+         font-size: 1.75em;
+         margin-bottom: 30px;
+     }
 
-    .banner-icons i {
-    font-size: 3.5em;
-    }
+     .banner-icons {
+         gap: 10px;
+     }
 
-    section#home {
-        padding:20px;
-   
-    }
+     .banner-icons i {
+         font-size: 3.5em;
+     }
 
-    header.banner-text h1 {
-    font-weight: 700;
-    letter-spacing: 0.03125rem;
-    font-size: 1.75em;
-    margin-bottom: 30px;
-    }
-
-    #introduce_myself{
-        display: none;
-    }
+     #introduce_myself {
+         display: none;
+     }
 
      .header h1 {
          font-size: 2.2rem;
+     }
+
+     .card {
+         margin-right: 20px;
+         margin-left: 20px;
+     }
+
+     .card-icon {
+         height: 140px;
      }
 
      .tech-grid {
@@ -714,79 +669,38 @@
          gap: 20px;
      }
 
-     .card-icon {
-         height: 140px;
-     }
-
      .tech-name {
          font-size: 1.2rem;
      }
  }
- 
+
+
+ /*-------- MOBILE ------- */
 
  @media (max-width: 576px) {
-
-    #topo{
-        position: fixed;
-        top: 0;
-        width: 100%;
-        backdrop-filter: blur(10px);
-        background-color: rgba(30, 30, 30, 0.4);
-        z-index: 10;
-        height: 3.625rem;
-    }
-
-    .banner-icons {
-        gap: 35px;
-        padding-top: 10px;
-    }
-
-    nav{
-        background:rgba(13,13,13,0.8);
-		max-width: 200px;
-		width: 35%;
-		position: fixed;
-		z-index: 9999;
-		top: 0;
-		right: -250px;
-		transition: right .5s ease-out;
-    }
-
-    .abrir-menu{
-		background:url(../img/menu.svg) no-repeat;
-		padding: 20px;
-		display: block;
-		border: 0;
-	}
 
      .central-esteira,
      #introduce_myself,
      .header-divider,
      header.banner-text button,
-     #seta{
+     #seta {
          display: none;
      }
 
-     .banner-icons{
-        justify-content: center;
+     #topo {
+         position: fixed;
+         top: 0;
+         width: 100%;
+         backdrop-filter: blur(10px);
+         background-color: rgba(30, 30, 30, 0.4);
+         z-index: 10;
+         height: 3.625rem;
      }
 
-     #sobre{
-        margin-top: 130px;
-     }
-
-     .cards-grid{
-        margin-bottom: 20px;
-     }
-
-     .card{
-        margin-right: 20px;
-        margin-left: 20px;
-     }
-
-     .custom-button{
-        overflow: unset;
-        padding: 7px 20px;;
+     .custom-button {
+         overflow: unset;
+         padding: 7px 20px;
+         ;
      }
 
      section#home {
@@ -813,10 +727,48 @@
          max-width: 100%;
      }
 
+     .banner-icons {
+         gap: 35px;
+         padding-top: 10px;
+     }
+
+     .banner-icons {
+         justify-content: center;
+     }
+
+     nav {
+         background: rgba(13, 13, 13, 0.8);
+         max-width: 200px;
+         width: 35%;
+         position: fixed;
+         z-index: 9999;
+         top: 0;
+         right: -250px;
+         transition: right .5s ease-out;
+     }
+
+     .abrir-menu {
+         background: url(../img/menu.svg) no-repeat;
+         padding: 20px;
+         display: block;
+         border: 0;
+     }
+
+     #sobre {
+         margin-top: 170px;
+     }
+
+     .cards-grid {
+         margin-bottom: 20px;
+     }
+
+     .card {
+         margin-right: 20px;
+         margin-left: 20px;
+     }
+
      .tech-grid {
          grid-template-columns: repeat(2, 1fr);
          gap: 15px;
      }
-
-
  }

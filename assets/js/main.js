@@ -1,59 +1,116 @@
-
-let contador = 0;
-let txt = 'Desenvolvedor em transição com foco em web, apaixonado por tecnologia e inovação';
-let speed = 50;
-
-const btn_group = document.querySelector('.button-group');
-
-const stacks = [
-  {dev : 'back', titulo : 'HelpDesk', link: 'https://github.com/PhilCard/JokenPo', img : 'img/helpDesk.jpg'},
-  {dev : 'front', titulo : 'Jokenpo', link: 'https://github.com/PhilCard/helpDesk', img : 'img/jokenpo.jpg'}
-  //{dev : 'back', img : 'img/jokenpo.jpg'}
+const projects = [
+    {
+        link : '#',
+        img:'assets/img/sobremim.png', 
+        title: 'JavaScript', 
+        category: 'Front-End' 
+    },
+    {
+        link : '#',
+        img:'assets/img/sobremim.png', 
+        title: 'PHP', 
+        category: 'Back-End' 
+    },
+    {   
+        link : '#',
+        img:'assets/img/sobremim.png', 
+        title: 'Node.JS', 
+        category: 'Back-End' 
+    },
+    {   
+        link : '#',
+        img:'assets/img/sobremim.png', 
+        title: 'Node.JS', 
+        category: 'Back-End' 
+    },
+    {   
+        link : '#',
+        img:'assets/img/sobremim.png', 
+        title: 'Node.JS', 
+        category: 'Back-End' 
+    }
 ]
 
-window.addEventListener('load',typeWriter);
+filtra_projects = [...projects];
 
-function changeLanguage()
-{
-  let lang = document.getElementById('language').value;
-  if(lang == 'en')
-  {
-    //window.location = 'en/index.html';
-    console.log('english');
-  }
-  else
-  {
-    console.log('estou em pt');
-  }
+let contador = 0;
+//Developer in transition with a focus on web, passionate about technology and innovation.
+let speed = 50;
+let lang = document.getElementById('language');
+
+const btn_group = document.querySelector('.button-group');
+const techContainer = document.querySelector('.tech-grid');
+const btn_todos = document.getElementById('todos');
+const btn_back = document.getElementById('backend');
+const btn_front = document.getElementById('frontend');
+
+
+const mostraProjects = () => {
+
+    techContainer.innerHTML = filtra_projects.map((project) => {
+        return `<div class="tech-card">
+             <a href="${project.link}">
+                <div class="card-icon react">
+                    <img src="${project.img}" alt="">
+                </div>
+                <div class="card-info">
+                    <h3 class="tech-name">${project.title}</h3>
+                    <p class="tech-category">${project.category}</p>
+                </div>
+            </a>
+        </div>`
+    })
+    .join('')
 }
 
-window.onscroll = function()
-{
-  let topo = window.pageYOffset;
-  if(topo > 400)
-  {
-    document.getElementById('seta').classList.add('scroll-top');
-  }
-  else
-  {
-    document.getElementById('seta').classList.remove('scroll-top');
-  }
+
+window.onscroll = function () {
+    let topo = window.pageYOffset;
+    if (topo > 400) {
+        document.getElementById('seta').classList.add('scroll-top');
+    } else {
+        document.getElementById('seta').classList.remove('scroll-top');
+    }
 }
 
-function typeWriter() {
-  if (contador < txt.length) {
-    document.getElementById("introduce_myself").innerHTML += txt.charAt(contador);
-    contador++;
-    setTimeout(typeWriter, speed);
-  }
+
+window.addEventListener('load', function () {
+
+    mostraProjects();
+    //btn_todos.classList.add('button-hover');
+
+    if (lang.value === 'pt') {
+        typeWriter();
+    } else if (lang.value === 'en') {
+        typeWriter('Developer in transition with a focus on web, passionate about technology and innovation');
+    }
+
+});
+
+function changeLanguage() {
+    if (lang.value == 'en') {
+        window.location = 'http://localhost/philcard.github.io/en/';
+        //https://philcard.github.io/
+    } else if (lang.value == 'pt') {
+        window.location = 'http://localhost/philcard.github.io';
+        //https://philcard.github.io/en
+    }
+}
+
+function typeWriter(txt = 'Desenvolvedor em transição com foco em web, apaixonado por tecnologia e inovação') { //adicionar parametro para ingles e português
+    if (contador < txt.length) {
+        document.getElementById("introduce_myself").innerHTML += txt.charAt(contador);
+        contador++;
+        setTimeout(typeWriter, speed);
+    }
 }
 
 const devIcons = document.getElementById("devIcons");
 
-    function slideOnce() {
-      devIcons.style.transform = "translateX(-100px)"; // move 1 ícone (80px + 20px gap)
+function slideOnce() {
+    devIcons.style.transform = "translateX(-100px)"; // move 1 ícone (80px + 20px gap)
 
-      setTimeout(() => {
+    setTimeout(() => {
         // Após a animação, mover o primeiro ícone para o final
         const firstIcon = devIcons.firstElementChild;
         devIcons.appendChild(firstIcon);
@@ -64,48 +121,31 @@ const devIcons = document.getElementById("devIcons");
 
         // Reabilitar a transição para o próximo ciclo
         setTimeout(() => {
-          devIcons.style.transition = "transform 0.5s ease-in-out";
+            devIcons.style.transition = "transform 0.5s ease-in-out";
         }, 20);
-      }, 500); // Tempo da animação
-    }
+    }, 500); // Tempo da animação
+}
 setInterval(slideOnce, 2000);
 
 
 btn_group.addEventListener('click', event => {
 
-  if(event.target && event.target.id === 'todos') 
-  {
-    //console.log(event.target.id);
-    /*
-    for(let stack of stacks)
-    {
+    const botoesIds = [btn_todos,btn_back,btn_front];
 
-    }
-    //mudar estilo do botão, mostrar que está selecionado
-    /*/
-  }
-   if(event.target && event.target.id === 'backend') 
-  {
-    //console.log(event.target.id);
-    /*
-    for(let stack of stacks)
-    {
+    for(let i = 0; i < 3; i++) {
+        if(event.target && event.target.id === botoesIds[i].id) {
+            //console.log(botoesIds[i]);
+            botaoProject = botoesIds[i]
+            //botaoProject.style.background = 'red';
 
-    }
-    //mudar estilo do botão, mostrar que está selecionado
-    /*/
-  }
-   if(event.target && event.target.id === 'frontend') 
-  {
-    //console.log(event.target.id);
-    /*
-    for(let stack of stacks)
-    {
+            botaoProject.onmouseover = function () {
+                //alert('passou aqui');
+            }
 
+            botaoProject.onmouseout = function() {
+                //alert('saiu daqui');
+            };
+        }
     }
-    //mudar estilo do botão, mostrar que está selecionado
-    /*/
-  }
 
 });
-
