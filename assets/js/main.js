@@ -39,39 +39,11 @@ let speed = 50;
 let lang = document.getElementById('language');
 
 const btn_group = document.querySelector('.button-group');
-const techContainer = document.querySelector('.tech-grid');
+const btns = btn_group.querySelectorAll('button');
 const btn_todos = document.getElementById('todos');
 const btn_back = document.getElementById('backend');
 const btn_front = document.getElementById('frontend');
-
-
-const mostraProjects = () => {
-
-    techContainer.innerHTML = filtra_projects.map((project) => {
-        return `<div class="tech-card">
-             <a href="${project.link}">
-                <div class="card-icon react">
-                    <img src="${project.img}" alt="">
-                </div>
-                <div class="card-info">
-                    <h3 class="tech-name">${project.title}</h3>
-                    <p class="tech-category">${project.category}</p>
-                </div>
-            </a>
-        </div>`
-    })
-    .join('')
-}
-
-
-window.onscroll = function () {
-    let topo = window.pageYOffset;
-    if (topo > 400) {
-        document.getElementById('seta').classList.add('scroll-top');
-    } else {
-        document.getElementById('seta').classList.remove('scroll-top');
-    }
-}
+const techContainer = document.querySelector('.tech-grid');
 
 
 window.addEventListener('load', function () {
@@ -128,24 +100,65 @@ function slideOnce() {
 setInterval(slideOnce, 2000);
 
 
-btn_group.addEventListener('click', event => {
 
-    const botoesIds = [btn_todos,btn_back,btn_front];
-
-    for(let i = 0; i < 3; i++) {
-        if(event.target && event.target.id === botoesIds[i].id) {
-            //console.log(botoesIds[i]);
-            botaoProject = botoesIds[i]
-            //botaoProject.style.background = 'red';
-
-            botaoProject.onmouseover = function () {
-                //alert('passou aqui');
-            }
-
-            botaoProject.onmouseout = function() {
-                //alert('saiu daqui');
-            };
-        }
+window.onscroll = function () {
+    let topo = window.pageYOffset;
+    if (topo > 400) {
+        document.getElementById('seta').classList.add('scroll-top');
+    } else {
+        document.getElementById('seta').classList.remove('scroll-top');
     }
+}
 
-});
+
+const mostraProjects = () => {
+
+    techContainer.innerHTML = filtra_projects.map((project) => {
+        return `<div class="tech-card">
+             <a href="${project.link}">
+                <div class="card-icon react">
+                    <img src="${project.img}" alt="">
+                </div>
+                <div class="card-info">
+                    <h3 class="tech-name">${project.title}</h3>
+                    <p class="tech-category">${project.category}</p>
+                </div>
+            </a>
+        </div>`
+    })
+    .join('')
+}
+
+
+btns.forEach((button) => {
+    let btn = button;
+    btn.addEventListener('click', event =>{
+        if(event.target && event.target.id === 'todos') {
+           btn_todos.style.background = 'ghostwhite';
+           btn_todos.style.color = '#0d0d0d';
+           btn_back.style.background = '#0d0d0d';
+           btn_back.style.color = 'ghostwhite';
+           btn_front.style.background = '#0d0d0d';
+           btn_front.style.color = 'ghostwhite';
+        }
+        else if(event.target && event.target.id === 'backend') 
+        {
+            btn_back.style.background = 'ghostwhite';
+            btn_back.style.color = '#0d0d0d';
+            btn_front.style.background = '#0d0d0d';
+            btn_front.style.color = 'ghostwhite';
+            btn_todos.style.background = '#0d0d0d';
+            btn_todos.style.color = 'ghostwhite';
+        }
+        else if(event.target && event.target.id === 'frontend') 
+        {
+            btn_front.style.background = 'ghostwhite';
+            btn_front.style.color = '#0d0d0d';
+            btn_back.style.background = '#0d0d0d';
+            btn_back.style.color = 'ghostwhite';
+            btn_todos.style.background = '#0d0d0d';
+            btn_todos.style.color = 'ghostwhite';
+        }
+   })
+})
+

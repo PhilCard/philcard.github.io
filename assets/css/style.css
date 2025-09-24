@@ -205,7 +205,8 @@
  /* ----- Seção Sobre ------ */
 
  .sobre-mim {
-     margin-top: 100px;
+     margin-top: 20px;
+    padding: 20px;
  }
 
 
@@ -244,6 +245,7 @@
      justify-content: center;
      margin-top: 40px;
      margin-bottom: 75px;
+     padding: 20px;
      flex-wrap: wrap;
  }
 
@@ -404,15 +406,16 @@
      */
 
  /* precisa acionar evento mouse */
+ /*
  .hover-ativo{
     color: #0f0f0f;
     background: #d9d9d9;
     border-color: transparent;
-}
+}*/
 
  .custom-button:hover {
-     background: rgba(255, 255, 255, 0.2);
-     border-color: transparent;
+     background: rgba(255, 255, 255, 0.2) !important;
+     border-color: transparent !important;
  }
 
  @keyframes gradient {
@@ -767,8 +770,145 @@
          margin-left: 20px;
      }
 
+     .card:hover{
+        transform: none;
+        translate: none;
+     }
+
      .tech-grid {
          grid-template-columns: repeat(2, 1fr);
          gap: 15px;
      }
+
+     .tech-card:hover{
+        transform: none;
+        translate: none;
+     }
  }
+
+
+ .frame-container {
+            position: relative;
+            width: 90%;
+            
+        }
+
+        .gradient-frame {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #764ba2 100%);
+            padding: 4px 8px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .gradient-frame::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            right: -2px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #764ba2 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%);
+            border-radius: 0 20px 0 0;
+        }
+
+        .gradient-frame::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: -2px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #764ba2 100%);
+            clip-path: polygon(0 0, 0 100%, 100% 100%);
+            border-radius: 0 0 0 20px;
+        }
+
+        .frame-content {
+            background: #121212;
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #666;
+            text-align: center;
+            box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .frame-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #764ba2 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%);
+        }
+
+        .frame-content::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #764ba2 100%);
+            clip-path: polygon(0 0, 0 100%, 100% 100%);
+        }
+
+        /* Versão alternativa mais simples */
+        .simple-frame {
+            width: 600px;
+            height: 400px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #764ba2 100%);
+            border-radius: 20px;
+            padding: 4px 8px;
+            margin: 40px auto;
+            position: relative;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+        }
+
+        .simple-frame .content {
+            background: white;
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .simple-frame::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            right: -2px;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #764ba2 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%);
+            border-radius: 0 20px 0 0;
+        }
+
+        .simple-frame::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: -2px;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #764ba2 100%);
+            clip-path: polygon(0 0, 0 100%, 100% 100%);
+            border-radius: 0 0 0 20px;
+        }
