@@ -2,36 +2,68 @@ const projects = [
     {
         link : '#',
         img:'assets/img/sobremim.png', 
-        title: 'JavaScript', 
-        category: 'Front-End' 
+        title: 'JokenPO', 
+        category: 'FrontEnd' 
+    },
+    {   
+        link : '#',
+        img:'assets/img/phpWizzard.png', 
+        title: 'HelpDesk', 
+        category: 'BackEnd' 
     },
     {
         link : '#',
         img:'assets/img/sobremim.png', 
-        title: 'PHP', 
-        category: 'Back-End' 
+        title: 'KillMosque', 
+        category: 'FrontEnd' 
+    },
+    {   
+        link : '#',
+        img:'assets/img/phpWizzard.png', 
+        title: 'SendMail', 
+        category: 'BackEnd' 
     },
     {   
         link : '#',
         img:'assets/img/sobremim.png', 
-        title: 'Node.JS', 
-        category: 'Back-End' 
+        title: 'OrçamentoApp', 
+        category: 'FrontEnd' 
     },
     {   
         link : '#',
         img:'assets/img/sobremim.png', 
-        title: 'Node.JS', 
-        category: 'Back-End' 
+        title: 'PorfolioWeb', 
+        category: 'FrontEnd' 
     },
     {   
         link : '#',
         img:'assets/img/sobremim.png', 
-        title: 'Node.JS', 
-        category: 'Back-End' 
+        title: 'Ecommerce', 
+        category: 'BackEnd' 
+    },
+    {   
+        link : '#',
+        img:'assets/img/sobremim.png', 
+        title: 'Store Web', 
+        category: 'BackEnd' 
+    },
+     {   
+        link : '#',
+        img:'assets/img/sobremim.png', 
+        title: 'ToDoList', 
+        category: 'FrontEnd' 
+    },
+    {   
+        link : '#',
+        img:'assets/img/sobremim.png', 
+        title: 'OabApp', 
+        category: 'BackEnd' 
     }
 ]
 
 filtra_projects = [...projects];
+
+//criar função para mapear projetos e filtrar, tornar o código menos verboso
 
 let contador = 0;
 //Developer in transition with a focus on web, passionate about technology and innovation.
@@ -48,7 +80,11 @@ const techContainer = document.querySelector('.tech-grid');
 
 window.addEventListener('load', function () {
 
-    mostraProjects();
+    techContainer.innerHTML = filtra_projects.map(projeto => {
+        return exibeProjetos(projeto);
+    })
+    .join('');
+    
     //btn_todos.classList.add('button-hover');
 
     if (lang.value === 'pt') {
@@ -111,54 +147,66 @@ window.onscroll = function () {
 }
 
 
-const mostraProjects = () => {
+function exibeProjetos(projeto) {
 
-    techContainer.innerHTML = filtra_projects.map((project) => {
-        return `<div class="tech-card">
-             <a href="${project.link}">
-                <div class="card-icon react">
-                    <img src="${project.img}" alt="">
-                </div>
-                <div class="card-info">
-                    <h3 class="tech-name">${project.title}</h3>
-                    <p class="tech-category">${project.category}</p>
-                </div>
-            </a>
-        </div>`
-    })
-    .join('')
+    return `<div class="tech-card">
+        <a href="${projeto.link}">
+            <div class="card-icon react">
+                <img src="${projeto.img}" alt="">
+            </div>
+            <div class="card-info">
+                <h3 class="tech-name">${projeto.title}</h3>
+                <p class="tech-category">${projeto.category}</p>
+            </div>
+        </a>
+    </div>`
 }
 
 
 btns.forEach((button) => {
     let btn = button;
     btn.addEventListener('click', event =>{
-        if(event.target && event.target.id === 'todos') {
-           btn_todos.style.background = 'ghostwhite';
-           btn_todos.style.color = '#0d0d0d';
-           btn_back.style.background = '#0d0d0d';
-           btn_back.style.color = 'ghostwhite';
-           btn_front.style.background = '#0d0d0d';
-           btn_front.style.color = 'ghostwhite';
+
+        const botoesCate = [btn_todos, btn_back, btn_front];
+        let btnActive;
+        let btnInative;
+
+        for(let i = 0; i < botoesCate.length; i++) {
+
+            for(let x in botoesCate) {
+
+                if(event.target && event.target.id === botoesCate[i].id) {
+                     
+                    if(botoesCate[x] == botoesCate[i]) {
+                        btnActive = botoesCate[x];
+                        btnActive.style.background = 'ghostwhite';
+                        btnActive.style.color = '#0d0d0d';
+                    }
+                    else if(botoesCate[x] !== botoesCate[i]) {
+                       btnInative = botoesCate[x];
+                       btnInative.style.background = '#0d0d0d';
+                       btnInative.style.color = 'ghostwhite';
+                    }
+                }
+            }
         }
-        else if(event.target && event.target.id === 'backend') 
-        {
-            btn_back.style.background = 'ghostwhite';
-            btn_back.style.color = '#0d0d0d';
-            btn_front.style.background = '#0d0d0d';
-            btn_front.style.color = 'ghostwhite';
-            btn_todos.style.background = '#0d0d0d';
-            btn_todos.style.color = 'ghostwhite';
+
+        if(btnActive.id === 'todos') {
+            techContainer.innerHTML = filtra_projects.map(projeto => {
+                return exibeProjetos(projeto);
+            })
+            .join('');
         }
-        else if(event.target && event.target.id === 'frontend') 
-        {
-            btn_front.style.background = 'ghostwhite';
-            btn_front.style.color = '#0d0d0d';
-            btn_back.style.background = '#0d0d0d';
-            btn_back.style.color = 'ghostwhite';
-            btn_todos.style.background = '#0d0d0d';
-            btn_todos.style.color = 'ghostwhite';
+        else 
+        {   
+            techContainer.innerHTML = '';
+            filtra_projects
+                .filter(projeto => projeto.category.toLowerCase() === btnActive.id)
+                .forEach(projeto => {
+                    techContainer.innerHTML += exibeProjetos(projeto);
+                });
         }
    })
 })
+
 
