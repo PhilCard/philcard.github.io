@@ -1,61 +1,61 @@
 const projects = [
     {
-        link : '#',
-        img:'assets/img/sobremim.png', 
+        link : 'https://github.com/PhilCard/JokenPo',
+        img:'https://philcard.github.io/assets/img/sobremim.png', 
         title: 'JokenPO', 
         category: 'FrontEnd' 
     },
     {   
-        link : '#',
-        img:'assets/img/phpWizzard.png', 
+        link : 'https://github.com/PhilCard/helpDesk',
+        img:'https://philcard.github.io/assets/img/phpWizzard.png', 
         title: 'HelpDesk', 
         category: 'BackEnd' 
     },
     {
         link : '#',
-        img:'assets/img/sobremim.png', 
+        img:'https://philcard.github.io/assets/img/sobremim.png', 
         title: 'KillMosque', 
         category: 'FrontEnd' 
     },
     {   
-        link : '#',
-        img:'assets/img/phpWizzard.png', 
+        link : 'https://project-philcard.infinityfreeapp.com/index.php',
+        img:'https://philcard.github.io/assets/img/phpWizzard.png', 
         title: 'SendMail', 
         category: 'BackEnd' 
     },
     {   
         link : '#',
-        img:'assets/img/sobremim.png', 
+        img:'https://philcard.github.io/assets/img/sobremim.png', 
         title: 'OrçamentoApp', 
         category: 'FrontEnd' 
     },
     {   
-        link : '#',
-        img:'assets/img/sobremim.png', 
+        link : 'https://github.com/PhilCard/philcard.github.io',
+        img:'https://philcard.github.io/assets/img/sobremim.png', 
         title: 'PorfolioWeb', 
         category: 'FrontEnd' 
     },
     {   
-        link : '#',
-        img:'assets/img/sobremim.png', 
+        link : 'https://github.com/PhilCard/aginfluencer',
+        img:'https://philcard.github.io/assets/img/phpWizzard.png', 
         title: 'Ecommerce', 
         category: 'BackEnd' 
     },
     {   
         link : '#',
-        img:'assets/img/sobremim.png', 
+        img:'https://philcard.github.io/assets/img/phpWizzard.png', 
         title: 'Store Web', 
         category: 'BackEnd' 
     },
-     {   
+    {   
         link : '#',
-        img:'assets/img/sobremim.png', 
+        img:'https://philcard.github.io/assets/img/sobremim.png', 
         title: 'ToDoList', 
         category: 'FrontEnd' 
     },
     {   
-        link : '#',
-        img:'assets/img/sobremim.png', 
+        link : 'https://github.com/PhilCard/oabApp',
+        img:'https://philcard.github.io/assets/img/phpWizzard.png', 
         title: 'OabApp', 
         category: 'BackEnd' 
     }
@@ -64,12 +64,10 @@ const projects = [
 filtra_projects = [...projects];
 
 //criar função para mapear projetos e filtrar, tornar o código menos verboso
-
 let contador = 0;
-//Developer in transition with a focus on web, passionate about technology and innovation.
-let speed = 50;
-let lang = document.getElementById('language');
-
+const speed = 50;
+const lang = document.getElementById('language');
+const devIcons = document.getElementById("devIcons");
 const btn_group = document.querySelector('.button-group');
 const btns = btn_group.querySelectorAll('button');
 const btn_todos = document.getElementById('todos');
@@ -84,36 +82,44 @@ window.addEventListener('load', function () {
         return exibeProjetos(projeto);
     })
     .join('');
-    
-    //btn_todos.classList.add('button-hover');
 
     if (lang.value === 'pt') {
-        typeWriter();
-    } else if (lang.value === 'en') {
-        typeWriter('Developer in transition with a focus on web, passionate about technology and innovation');
+        apresentaPerfil();
+    }
+    else if(lang.value === 'en') 
+    {
+        introduceMySelf();
     }
 
 });
 
 function changeLanguage() {
-    if (lang.value == 'en') {
-        window.location = 'http://localhost/philcard.github.io/en/';
-        //https://philcard.github.io/
-    } else if (lang.value == 'pt') {
-        window.location = 'http://localhost/philcard.github.io';
-        //https://philcard.github.io/en
+    if (lang.value == 'en') 
+    {
+        window.location = 'https://philcard.github.io/en';
+    } 
+    else if (lang.value == 'pt') 
+    {
+        window.location = 'https://philcard.github.io';
     }
 }
 
-function typeWriter(txt = 'Desenvolvedor em transição com foco em web, apaixonado por tecnologia e inovação') { //adicionar parametro para ingles e português
+function introduceMySelf (txt = 'Developer in transition with a focus on web, passionate about technology and innovation') {
     if (contador < txt.length) {
         document.getElementById("introduce_myself").innerHTML += txt.charAt(contador);
         contador++;
-        setTimeout(typeWriter, speed);
+        setTimeout(introduceMySelf, speed);
     }
 }
 
-const devIcons = document.getElementById("devIcons");
+function apresentaPerfil (txt = 'Desenvolvedor em transição com foco em web, apaixonado por tecnologia e inovação') {
+    if (contador < txt.length) {
+        document.getElementById("introduce_myself").innerHTML += txt.charAt(contador);
+        contador++;
+        setTimeout(apresentaPerfil, speed);
+    }
+}
+
 
 function slideOnce() {
     devIcons.style.transform = "translateX(-100px)"; // move 1 ícone (80px + 20px gap)
@@ -136,12 +142,27 @@ function slideOnce() {
 setInterval(slideOnce, 2000);
 
 
+function topoNavMobile() {
+    document.querySelector(".abrir-menu").onclick = function(){
+        document.documentElement.classList.add("menu-ativo");
+    }
+  
+  document.querySelector(".fechar-menu").onclick = function(){
+    document.documentElement.classList.remove("menu-ativo");
+    //fim botão abrir e fechar menu//
+  }
+}
+
+topoNavMobile();
+
 
 window.onscroll = function () {
     let topo = window.pageYOffset;
     if (topo > 400) {
         document.getElementById('seta').classList.add('scroll-top');
-    } else {
+    } 
+    else 
+    {
         document.getElementById('seta').classList.remove('scroll-top');
     }
 }
@@ -150,7 +171,7 @@ window.onscroll = function () {
 function exibeProjetos(projeto) {
 
     return `<div class="tech-card">
-        <a href="${projeto.link}">
+        <a href="${projeto.link}" target="_blank">
             <div class="card-icon react">
                 <img src="${projeto.img}" alt="">
             </div>
@@ -177,12 +198,14 @@ btns.forEach((button) => {
 
                 if(event.target && event.target.id === botoesCate[i].id) {
                      
-                    if(botoesCate[x] == botoesCate[i]) {
+                    if(botoesCate[x] == botoesCate[i]) 
+                    {
                         btnActive = botoesCate[x];
                         btnActive.style.background = 'ghostwhite';
                         btnActive.style.color = '#0d0d0d';
                     }
-                    else if(botoesCate[x] !== botoesCate[i]) {
+                    else if(botoesCate[x] !== botoesCate[i]) 
+                    {
                        btnInative = botoesCate[x];
                        btnInative.style.background = '#0d0d0d';
                        btnInative.style.color = 'ghostwhite';
@@ -191,7 +214,8 @@ btns.forEach((button) => {
             }
         }
 
-        if(btnActive.id === 'todos') {
+        if(btnActive.id === 'todos') 
+        {
             techContainer.innerHTML = filtra_projects.map(projeto => {
                 return exibeProjetos(projeto);
             })
