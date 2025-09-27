@@ -29,7 +29,8 @@ O objetivo é centralizar minhas experiências e habilidades em um único lugar,
    ```bash
    git clone https://github.com/PhilCard/philcard.github.io
 
-2. Abra o arquivo index.html em seu navegador.
+2. Acesse a pasta do projeto: cd philcard.github.io
+3. Abra o arquivo index.html em seu navegador.
    
 
 ✨ Desenvolvido com dedicação utilizando HTML, CSS e JavaScript.
