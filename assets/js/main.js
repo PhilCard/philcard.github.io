@@ -142,18 +142,14 @@ function slideOnce() {
 setInterval(slideOnce, 2000);
 
 
-function topoNavMobile() {
-    document.querySelector(".abrir-menu").onclick = function(){
-        document.documentElement.classList.add("menu-ativo");
-    }
-  
-  document.querySelector(".fechar-menu").onclick = function(){
-    document.documentElement.classList.remove("menu-ativo");
-    //fim botão abrir e fechar menu//
-  }
-}
 
-topoNavMobile();
+document.querySelector(".abrir-menu").onclick = function(){
+    document.documentElement.classList.add("menu-ativo");
+}
+  
+document.querySelector(".fechar-menu").onclick = function(){
+    document.documentElement.classList.remove("menu-ativo");
+}
 
 
 window.onscroll = function () {
