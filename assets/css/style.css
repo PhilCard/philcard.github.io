@@ -1059,7 +1059,34 @@
          translate: none;
      }
 
+     .border-box {
+        width: unset;
+     }
+
+     .style7{
+        position: unset;
+     }
+
+     .style7::before ,
+     .style7 .top-right,
+     .style7 .bottom-left,
+     .style7::after{
+        top: unset;
+        left: unset;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 0;
+        width: unset;
+        height: unset;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
      .tech-grid {
+        padding: 0;
          grid-template-columns: repeat(2, 1fr);
          gap: 15px;
      }
